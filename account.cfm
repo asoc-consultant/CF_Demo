@@ -10,7 +10,7 @@
 
 
 <h1>Unprotected XSS <cfoutput>#session.username#</cfoutput></h1> \
-<h1>Protected XSS using Format method <cfoutput>#htmlcodeformat(session.username)#</cfoutput></h1>
+<!--- test@testfire.net --->
 <h1>Protected XSS using Encode method<cfoutput>#EncodeForHTML(session.username)#</cfoutput></h1>
 <h1>Made up or customs method.  Should flag as an unprotected XSS<cfoutput>#madeupEncodeTheHTML(session.username)#</cfoutput></h1>
 <cfquery name="user">SELECT balance FROM users WHERE id = #session.userID#</cfquery>
